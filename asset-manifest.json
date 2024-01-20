@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/test-redux-car-rent/static/css/main.cd2e038f.css",
+    "main.js": "/test-redux-car-rent/static/js/main.73e07dd5.js",
+    "static/js/983.9794e31f.chunk.js": "/test-redux-car-rent/static/js/983.9794e31f.chunk.js",
+    "static/js/7.aa4d7ce0.chunk.js": "/test-redux-car-rent/static/js/7.aa4d7ce0.chunk.js",
+    "static/js/62.2982efa4.chunk.js": "/test-redux-car-rent/static/js/62.2982efa4.chunk.js",
+    "index.html": "/test-redux-car-rent/index.html",
+    "main.cd2e038f.css.map": "/test-redux-car-rent/static/css/main.cd2e038f.css.map",
+    "main.73e07dd5.js.map": "/test-redux-car-rent/static/js/main.73e07dd5.js.map",
+    "983.9794e31f.chunk.js.map": "/test-redux-car-rent/static/js/983.9794e31f.chunk.js.map",
+    "7.aa4d7ce0.chunk.js.map": "/test-redux-car-rent/static/js/7.aa4d7ce0.chunk.js.map",
+    "62.2982efa4.chunk.js.map": "/test-redux-car-rent/static/js/62.2982efa4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd2e038f.css",
+    "static/js/main.73e07dd5.js"
+  ]
+}
