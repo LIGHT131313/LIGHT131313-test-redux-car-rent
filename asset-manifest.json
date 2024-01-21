@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/test-redux-car-rent/static/css/main.cd2e038f.css",
-    "main.js": "/test-redux-car-rent/static/js/main.73e07dd5.js",
-    "static/js/983.9794e31f.chunk.js": "/test-redux-car-rent/static/js/983.9794e31f.chunk.js",
-    "static/js/7.aa4d7ce0.chunk.js": "/test-redux-car-rent/static/js/7.aa4d7ce0.chunk.js",
-    "static/js/62.2982efa4.chunk.js": "/test-redux-car-rent/static/js/62.2982efa4.chunk.js",
+    "main.js": "/test-redux-car-rent/static/js/main.cd70492b.js",
+    "static/js/983.192962d2.chunk.js": "/test-redux-car-rent/static/js/983.192962d2.chunk.js",
+    "static/js/293.b9db4df7.chunk.js": "/test-redux-car-rent/static/js/293.b9db4df7.chunk.js",
+    "static/js/957.e77c9663.chunk.js": "/test-redux-car-rent/static/js/957.e77c9663.chunk.js",
+    "static/js/278.39d252f2.chunk.js": "/test-redux-car-rent/static/js/278.39d252f2.chunk.js",
     "index.html": "/test-redux-car-rent/index.html",
     "main.cd2e038f.css.map": "/test-redux-car-rent/static/css/main.cd2e038f.css.map",
-    "main.73e07dd5.js.map": "/test-redux-car-rent/static/js/main.73e07dd5.js.map",
-    "983.9794e31f.chunk.js.map": "/test-redux-car-rent/static/js/983.9794e31f.chunk.js.map",
-    "7.aa4d7ce0.chunk.js.map": "/test-redux-car-rent/static/js/7.aa4d7ce0.chunk.js.map",
-    "62.2982efa4.chunk.js.map": "/test-redux-car-rent/static/js/62.2982efa4.chunk.js.map"
+    "main.cd70492b.js.map": "/test-redux-car-rent/static/js/main.cd70492b.js.map",
+    "983.192962d2.chunk.js.map": "/test-redux-car-rent/static/js/983.192962d2.chunk.js.map",
+    "293.b9db4df7.chunk.js.map": "/test-redux-car-rent/static/js/293.b9db4df7.chunk.js.map",
+    "957.e77c9663.chunk.js.map": "/test-redux-car-rent/static/js/957.e77c9663.chunk.js.map",
+    "278.39d252f2.chunk.js.map": "/test-redux-car-rent/static/js/278.39d252f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.73e07dd5.js"
+    "static/js/main.cd70492b.js"
   ]
 }
