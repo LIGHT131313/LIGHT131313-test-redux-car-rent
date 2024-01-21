@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
 export const ListItem = styled.li`
-  display: flex;
   width: 274px;
-  height: 426px;
-  flex-direction: column;
-  align-items: flex-start;
 `;
 
 export const ListImgWrap = styled.div`
@@ -64,7 +60,7 @@ export const ListTextWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 28px;
-  max-height: 40px;
+  height: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
 `;

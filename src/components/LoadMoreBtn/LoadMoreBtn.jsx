@@ -1,20 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from '../../redux/adverts/operations';
-import {
-  selectAdverts,
-  selectPage,
-  selectPageLimit,
-} from '../../redux/adverts/selectors';
+import { selectStore } from '../../redux/adverts/selectors';
 import { setPage } from '../../redux/adverts/advertsSlice';
 import { LoadMBtn } from './LoadMoreBtn.styled';
+import { Loader } from 'components/Loader/Loader';
 
 export const LoadMoreBtn = () => {
-  const page = useSelector(selectPage);
-  const adverts = useSelector(selectAdverts);
-  const pageLimit = useSelector(selectPageLimit);
-
-  const showBtn = !(adverts.length < pageLimit * page);
   const dispatch = useDispatch();
+  const { page, items, pageLimit, isLoading, error } = useSelector(selectStore);
+
+  const showBtn = !(items.length < pageLimit * page);
+  const showLoader = isLoading && !error;
 
   const handleLoadMore = () => {
     const nextPage = page + 1;
@@ -25,6 +21,7 @@ export const LoadMoreBtn = () => {
 
   return (
     <>
+      {showLoader && <Loader />}
       {showBtn && (
         <LoadMBtn type="button" onClick={handleLoadMore}>
           Load more

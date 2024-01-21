@@ -6,11 +6,13 @@ export const Loader = () => {
       height="80"
       width="80"
       radius="9"
-      color="#a3d0c3"
       ariaLabel="three-dots-loading"
-      wrapperStyle={{}}
+      wrapperStyle={{
+        justifyContent: 'center',
+      }}
       wrapperClassName=""
       visible={true}
+      color="#3f51b5"
     />
   );
 };

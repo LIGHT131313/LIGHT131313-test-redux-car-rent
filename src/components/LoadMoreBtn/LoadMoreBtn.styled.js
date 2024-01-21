@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LoadMBtn = styled.button`
   display: block;
-  margin: 100px auto 0;
+  margin: 0 auto;
   background-color: transparent;
   color: #3470ff;
   /* font-size: 16px; */
