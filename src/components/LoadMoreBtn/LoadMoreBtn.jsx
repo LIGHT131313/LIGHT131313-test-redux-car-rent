@@ -6,6 +6,7 @@ import {
   selectPageLimit,
 } from '../../redux/adverts/selectors';
 import { setPage } from '../../redux/adverts/advertsSlice';
+import { LoadMBtn } from './LoadMoreBtn.styled';
 
 export const LoadMoreBtn = () => {
   const page = useSelector(selectPage);
@@ -25,9 +26,9 @@ export const LoadMoreBtn = () => {
   return (
     <>
       {showBtn && (
-        <button type="button" onClick={handleLoadMore}>
+        <LoadMBtn type="button" onClick={handleLoadMore}>
           Load more
-        </button>
+        </LoadMBtn>
       )}
     </>
   );

@@ -1,6 +1,6 @@
-# CAR Rent App
+# CAR Rent
 
-CAR Rent App is a application for a company providing car rental services in
+CAR Rent is a application for a company providing car rental services in
 Ukraine.
 
 ## Table of Content
@@ -12,15 +12,16 @@ Ukraine.
 
 ## Features
 
-- Home page with a general description of the services provided by the company.-
-  A page containing a catalog of cars of various configurations, which the user
-  can filter by brand, price per hour of car rental and the number of kilometers
-  covered by the car during its operation (mileage).
-- A page with ads that have been added to favorites by the user
+1. Home page with a general description of the services provided by the company.
+2. A page containing a catalog of cars of various configurations, which the user
+   can filter by brand, price per hour of car rental and the number of
+   kilometers covered by the car during its operation (mileage).
+3. A page with ads that have been added to favorites by the user
 
 ## Getting Started
 
-1. Clone the repo: `git clone {link repo}`
+1. Clone the repo:
+   `git clone https://github.com/LIGHT131313/test-redux-car-rent.git`
 2. Install dependencies: `npm i`
 3. Start the server: `npm start`
 

@@ -61,15 +61,25 @@ export const AdvertsListItem = ({ advert }) => {
       <img src={img || photoLink} alt={make} />
       <div>
         <h2>
-          {`${make} ${model}, ${year}`}
+          <span>
+            <span>{make}</span> <span>{`${model},`}</span>
+            <span> {year}</span>
+          </span>
           <span>{rentalPrice}</span>
         </h2>
-        <p>{address}</p>
-        <p>{rentalCompany}</p>
-        <p>{type}</p>
-        <p>{model}</p>
-        <p>{mileage}</p>
-        <p>{functionalities[0]}</p>
+        <ul>
+          <li>
+            <p>{address.split(',').splice(-2, 2)[0]}</p>
+            <p>{address.split(',').splice(-2, 2)[1]}</p>
+            <p>{rentalCompany}</p>
+          </li>
+          <li>
+            <p>{type}</p>
+            <p>{model}</p>
+            <p>{mileage}</p>
+            <p>{functionalities[0]}</p>
+          </li>
+        </ul>
       </div>
       <button aria-label="LearnMore" disabled={isLoading} onClick={handleOpen}>
         LearnMore
