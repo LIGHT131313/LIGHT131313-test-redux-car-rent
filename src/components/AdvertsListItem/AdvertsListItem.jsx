@@ -9,6 +9,22 @@ import {
   addFavorite,
   removeFavorite,
 } from '../../redux/adverts/favoritesSlice';
+import {
+  ListItem,
+  ListImgWrap,
+  ListImg,
+  ListTitleWrap,
+  ListTitle,
+  ListTitleSpan,
+  ListTextWrapper,
+  ListText,
+  LearnMoreBtn,
+  LearnMoreBtnText,
+  ListCheckWrap,
+  LabelCheck,
+  InputCheck,
+} from './AdvertsListItem.styled';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 export const AdvertsListItem = ({ advert }) => {
   const {
@@ -49,42 +65,48 @@ export const AdvertsListItem = ({ advert }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <li>
-      <div>
-        <input
-          type="checkbox"
-          aria-label="isFavorite"
-          checked={isFavorited}
-          onChange={() => handleCheckboxChange()}
-        ></input>
-      </div>
-      <img src={img || photoLink} alt={make} />
-      <div>
-        <h2>
-          <span>
-            <span>{make}</span> <span>{`${model},`}</span>
-            <span> {year}</span>
-          </span>
-          <span>{rentalPrice}</span>
-        </h2>
-        <ul>
-          <li>
-            <p>{address.split(',').splice(-2, 2)[0]}</p>
-            <p>{address.split(',').splice(-2, 2)[1]}</p>
-            <p>{rentalCompany}</p>
-          </li>
-          <li>
-            <p>{type}</p>
-            <p>{model}</p>
-            <p>{mileage}</p>
-            <p>{functionalities[0]}</p>
-          </li>
-        </ul>
-      </div>
-      <button aria-label="LearnMore" disabled={isLoading} onClick={handleOpen}>
-        LearnMore
-      </button>
+    <ListItem>
+      <ListImgWrap>
+        <ListCheckWrap>
+          <LabelCheck>
+            <InputCheck
+              type="checkbox"
+              aria-label="isFavorite"
+              checked={isFavorited}
+              onChange={() => handleCheckboxChange()}
+            ></InputCheck>
+            {isFavorited ? (
+              <FaHeart color="#3470FF" />
+            ) : (
+              <FaRegHeart color="rgba(255, 255, 255, 0.80)" />
+            )}
+          </LabelCheck>
+        </ListCheckWrap>
+        <ListImg src={img || photoLink} alt={make} />
+      </ListImgWrap>
+      <ListTitleWrap>
+        <ListTitle>
+          {make} <ListTitleSpan>{model},</ListTitleSpan> {year}
+        </ListTitle>
+        <ListTitle>{rentalPrice}</ListTitle>
+      </ListTitleWrap>
+      <ListTextWrapper>
+        <ListText>{address.split(',')[1]}</ListText>
+        <ListText>{address.split(',')[2]}</ListText>
+        <ListText>{rentalCompany}</ListText>
+        <ListText>{type}</ListText>
+        <ListText>{model}</ListText>
+        <ListText>{mileage}</ListText>
+        <ListText>{functionalities[0]}</ListText>
+      </ListTextWrapper>
+      <LearnMoreBtn
+        aria-label="LearnMore"
+        disabled={isLoading}
+        onClick={handleOpen}
+      >
+        <LearnMoreBtnText>Learn More</LearnMoreBtnText>
+      </LearnMoreBtn>
       <LearnMoreModal open={open} close={handleClose} advert={advert} />
-    </li>
+    </ListItem>
   );
 };

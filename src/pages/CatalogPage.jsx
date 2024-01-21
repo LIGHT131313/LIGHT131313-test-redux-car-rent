@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { fetchAdverts } from '../redux/adverts/operations';
 
 import { AdvertsList } from 'components/AdvertsList/AdvertsList';
-import { Filters } from 'components/Filters/Filters';
+// import { Filters } from 'components/Filters/Filters';
 import { LoadMoreBtn } from 'components/LoadMoreBtn/LoadMoreBtn';
 import { selectPageLimit } from '../redux/adverts/selectors';
 import { setPage } from '../redux/adverts/advertsSlice';
@@ -24,7 +24,7 @@ export default function CatalogPage() {
 
   return (
     <section>
-      <Filters />
+      {/* <Filters /> */}
       <AdvertsList />
       <LoadMoreBtn />
     </section>

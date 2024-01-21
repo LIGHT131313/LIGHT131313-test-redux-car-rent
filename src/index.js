@@ -13,7 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <PersistGate loading={null} persistor={persistor}>
-          {/* <BrowserRouter basename="/"> */}
           <BrowserRouter basename="/test-redux-car-rent">
             <App />
           </BrowserRouter>

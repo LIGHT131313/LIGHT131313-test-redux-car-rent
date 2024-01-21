@@ -1,44 +1,112 @@
 import styled from 'styled-components';
 
 export const ListItem = styled.li`
-  &:not(:last-child) {
-    border-bottom: 1px solid ${p => p.theme.colors.grey};
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.03);
-  }
+  display: flex;
+  width: 274px;
+  height: 426px;
+  flex-direction: column;
+  align-items: flex-start;
 `;
-export const ListItemText = styled.p`
+
+export const ListImgWrap = styled.div`
+  position: relative;
+  width: 274px;
+  height: 268px;
+  margin-bottom: 14px;
+`;
+
+export const ListCheckWrap = styled.div`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+`;
+
+export const LabelCheck = styled.label`
+  position: relative;
+  display: inline-block;
+`;
+
+export const InputCheck = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+`;
+
+export const ListImg = styled.img`
+  width: 100%;
+  height: 268px;
+  object-fit: cover;
+  border-radius: 14px;
+`;
+
+export const ListTitleWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 8px;
 `;
 
-export const ListPhone = styled.span`
-  font-size: 12px;
-  text-align: end;
-`;
-
-export const ListBtn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
+export const ListTitle = styled.p`
+  color: #121417;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
   margin: 0;
-  border: none;
-  border-radius: 4px;
-  border-color: transparent;
-  background-color: transparent;
-  cursor: pointer;
-  color: #f44336;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
-  &:hover,
-  &:focus {
-    background-color: #e2e5e8;
+export const ListTitleSpan = styled.span`
+  color: #3470ff;
+`;
+
+export const ListTextWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const ListText = styled.p`
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &::after {
+    content: '';
+    width: 0px;
+    height: 16px;
+    border-left: 1px solid rgba(18, 20, 23, 0.1);
+    margin-left: 6px;
+    margin-right: 6px;
   }
+
+  &:last-child::after {
+    content: none;
+  }
+`;
+
+export const LearnMoreBtn = styled.button`
+  width: 274px;
+  height: 44px;
+  border-radius: 12px;
+  background: #3470ff;
+
+  &:hover {
+    background: #0b44cd;
+  }
+`;
+
+export const LearnMoreBtnText = styled.p`
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
 `;

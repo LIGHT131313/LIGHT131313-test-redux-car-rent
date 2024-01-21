@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { selectAdverts } from '../../redux/adverts/selectors';
-import { List, ListMes } from './AdvertsList.styled';
+import { List } from './AdvertsList.styled';
 import { AdvertsListItem } from 'components/AdvertsListItem/AdvertsListItem';
 
 export const AdvertsList = () => {
@@ -8,15 +8,11 @@ export const AdvertsList = () => {
 
   return (
     <>
-      {adverts.length > 0 ? (
-        <List>
-          {adverts.map(advert => (
-            <AdvertsListItem key={advert.id} advert={advert} />
-          ))}
-        </List>
-      ) : (
-        <ListMes>No matches</ListMes>
-      )}
+      <List>
+        {adverts.map(advert => (
+          <AdvertsListItem key={advert.id} advert={advert} />
+        ))}
+      </List>
     </>
   );
 };
