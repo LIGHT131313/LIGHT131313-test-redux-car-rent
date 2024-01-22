@@ -1,6 +1,23 @@
-// import { useDispatch, useSelector } from 'react-redux';
 import Modal from '@mui/material/Modal';
-// import { selectContacts } from 'redux/contacts/selectors';
+import {
+  CloseBtn,
+  ModalWrap,
+  styleBox,
+  ImgModal,
+  ModalTitleText,
+  ModalTextSpan,
+  ModalTextWrapper,
+  ModalText,
+  ModalTextDescr,
+  ModalTitleAcc,
+  ModalList,
+  ModalConditionsWrap,
+  ConditionsWrap,
+  ConditionsSpan,
+  ModalBtn,
+} from './LearnMoreModal.styled';
+import Box from '@mui/material/Box';
+import { IoCloseOutline } from 'react-icons/io5';
 
 export const LearnMoreModal = ({ open, close, advert }) => {
   const {
@@ -15,83 +32,71 @@ export const LearnMoreModal = ({ open, close, advert }) => {
     engineSize,
     accessories,
     functionalities,
-    // rentalPrice,
-    // rentalCompany,
+    rentalPrice,
+    photoLink,
     address,
     rentalConditions,
-    // mileage,
+    mileage,
   } = advert;
-  // const dispatch = useDispatch();
-  // const contacts = useSelector(selectContacts);
 
-  // const onApply = editedContactValues => {
-  //   const isExistName = contacts.some(
-  //     contact =>
-  //       contact.name.toLowerCase() === editedContactValues.name.toLowerCase() &&
-  //       id !== contact.id
-  //   );
-  //   const isExistNumber = contacts.some(
-  //     contact =>
-  //       contact.number === editedContactValues.number && id !== contact.id
-  //   );
-  //   const isSameName =
-  //     name.toLowerCase() === editedContactValues.name.toLowerCase();
-  //   const isSameNumber = number === editedContactValues.number;
-
-  //   if (isSameName && isSameNumber) {
-  //     alert(`Please enter new values`);
-  //     return;
-  //   }
-  //   if (isExistName) {
-  //     alert(`Name ${editedContactValues.name} is already in contacts.`);
-  //     return;
-  //   }
-  //   if (isExistNumber) {
-  //     alert(`Number ${editedContactValues.number} is already in contacts.`);
-  //     return;
-  //   }
-
-  //   dispatch(editContact(editedContactValues));
-  //   close();
-  // };
+  const handleClick = () => {
+    window.location.href = 'tel:+380730000000';
+  };
+  const minAge = rentalConditions.split('\n')[0];
 
   return (
-    <Modal open={open} onClose={close}>
-      <div>
-        <>
+    <ModalWrap>
+      <Modal open={open} onClose={close} hidden={false}>
+        <Box sx={styleBox}>
           <div>
-            <button type="button" onClick={close}>
-              Close
-            </button>
-            <img src={img} alt={make} />
-            <h2>{`${make} ${model}, ${year}`}</h2>
-            <p>{address}</p>
-            <p>id: {id}</p>
-            <p>Year: {year}</p>
-            <p>Type: {type}</p>
-            <p>Fuel Consumption: {fuelConsumption}</p>
-            <p>Engine Size: {engineSize}</p>
-            <p>{description}</p>
-            <h3>Accessories and functionalities:</h3>
-            <ul>
-              {accessories.map(item => (
-                <li key={item}>
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-            <ul>
-              {functionalities.map(item => (
-                <li key={item}>
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-            <p>{rentalConditions}</p>
-            {/* <Link>Rental car</Link> */}
+            <CloseBtn type="button" onClick={close}>
+              <IoCloseOutline size={24} />
+            </CloseBtn>
+            <ImgModal src={img || photoLink} alt={make} />
+            <ModalTitleText>
+              {make} <ModalTextSpan>{model}</ModalTextSpan>, {year}
+            </ModalTitleText>
+            <ModalTextWrapper>
+              <ModalText>{address.split(',')[1]}</ModalText>
+              <ModalText>{address.split(',')[2]}</ModalText>
+              <ModalText>Id: {id}</ModalText>
+              <ModalText>Year: {year}</ModalText>
+              <ModalText>Type: {type}</ModalText>
+              <ModalText>Fuel Consumption: {fuelConsumption}</ModalText>
+              <ModalText>Engine Size: {engineSize}</ModalText>
+            </ModalTextWrapper>
+            <ModalTextDescr>{description}</ModalTextDescr>
+            <ModalTitleAcc>Accessories and functionalities:</ModalTitleAcc>
+            <ModalList>
+              <ModalText>{accessories[0]}</ModalText>
+              <ModalText>{accessories[1]}</ModalText>
+              <ModalText>{accessories[2]}</ModalText>
+              <ModalText>{functionalities[0]}</ModalText>
+              <ModalText>{functionalities[1]}</ModalText>
+              <ModalText>{functionalities[2]}</ModalText>
+            </ModalList>
+            <ModalTitleText>Rental Conditions: </ModalTitleText>
+            <ModalConditionsWrap>
+              <ConditionsWrap>
+                {minAge.split(':')[0]} :
+                <ConditionsSpan> {minAge.split(':')[1]}</ConditionsSpan>
+              </ConditionsWrap>
+              <ConditionsWrap>{rentalConditions.split('\n')[1]}</ConditionsWrap>
+              <ConditionsWrap>{rentalConditions.split('\n')[2]}</ConditionsWrap>
+              <ConditionsWrap>
+                Mileage:
+                <ConditionsSpan>
+                  {mileage.toLocaleString('en-US')}
+                </ConditionsSpan>
+              </ConditionsWrap>
+              <ConditionsWrap>
+                Price: <ConditionsSpan>{rentalPrice.slice(1)}$</ConditionsSpan>
+              </ConditionsWrap>
+            </ModalConditionsWrap>
+            <ModalBtn onClick={handleClick}>Rental car</ModalBtn>
           </div>
-        </>
-      </div>
-    </Modal>
+        </Box>
+      </Modal>
+    </ModalWrap>
   );
 };

@@ -6,6 +6,10 @@ import manropeMed from '../fonts/Manrope-Medium.woff';
 import manropeMedSec from '../fonts/Manrope-Medium.woff2';
 import manropeSB from '../fonts/Manrope-SemiBold.woff';
 import manropeSBSec from '../fonts/Manrope-SemiBold.woff2';
+import montserratReg from '../fonts/Montserrat-Regular.woff';
+import montserratRegSec from '../fonts/Montserrat-Regular.woff2';
+import montserratSB from '../fonts/Montserrat-SemiBold.woff';
+import montserratSBSec from '../fonts/Montserrat-SemiBold.woff2';
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -78,6 +82,22 @@ a {
 @font-face {
   font-family: 'Manrope';
   src: url(${manropeSB}), url(${manropeSBSec});
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(${montserratReg}), url(${montserratRegSec});
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(${montserratSB}), url(${montserratSBSec});
   font-weight: 600;
   font-display: swap;
   font-style: normal;

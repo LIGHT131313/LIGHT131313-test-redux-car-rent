@@ -5,12 +5,10 @@ export const LoadMBtn = styled.button`
   margin: 0 auto;
   background-color: transparent;
   color: #3470ff;
-  /* font-size: 16px; */
   font-weight: 500;
   line-height: 1.5;
   text-decoration-line: underline;
   transition: 250ms cubic-bezier(0.165, 0.84, 0.44, 1.03);
-  /* font-size: 16px; */
   font-style: normal;
 
   &:is(:hover, :focus) {
