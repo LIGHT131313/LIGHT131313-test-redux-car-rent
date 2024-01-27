@@ -23,8 +23,11 @@ import {
   ListCheckWrap,
   LabelCheck,
   InputCheck,
+  FavoriteIconStyle,
+  FavoriteBorderIconStyle,
 } from './AdvertsListItem.styled';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export const AdvertsListItem = ({ advert }) => {
   const {
@@ -76,9 +79,9 @@ export const AdvertsListItem = ({ advert }) => {
               onChange={() => handleCheckboxChange()}
             ></InputCheck>
             {isFavorited ? (
-              <FaHeart color="#3470FF" />
+              <FavoriteIcon sx={FavoriteIconStyle} />
             ) : (
-              <FaRegHeart color="rgba(255, 255, 255, 0.80)" />
+              <FavoriteBorderIcon sx={FavoriteBorderIconStyle} />
             )}
           </LabelCheck>
         </ListCheckWrap>

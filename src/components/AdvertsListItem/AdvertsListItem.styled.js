@@ -106,3 +106,17 @@ export const LearnMoreBtnText = styled.p`
   font-weight: 600;
   line-height: 1.43;
 `;
+
+export const FavoriteIconStyle = {
+  color: '#3470FF',
+  cursor: 'pointer',
+  width: '18px',
+  height: '18px',
+};
+
+export const FavoriteBorderIconStyle = {
+  color: 'rgba(255, 255, 255, 0.80)',
+  cursor: 'pointer',
+  width: '18px',
+  height: '18px',
+};

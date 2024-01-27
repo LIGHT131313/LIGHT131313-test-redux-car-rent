@@ -17,7 +17,7 @@ import {
   ModalBtn,
 } from './LearnMoreModal.styled';
 import Box from '@mui/material/Box';
-import { IoCloseOutline } from 'react-icons/io5';
+import CloseIcon from '@mui/icons-material/Close';
 
 export const LearnMoreModal = ({ open, close, advert }) => {
   const {
@@ -50,7 +50,7 @@ export const LearnMoreModal = ({ open, close, advert }) => {
         <Box sx={styleBox}>
           <div>
             <CloseBtn type="button" onClick={close}>
-              <IoCloseOutline size={24} />
+              <CloseIcon />
             </CloseBtn>
             <ImgModal src={img || photoLink} alt={make} />
             <ModalTitleText>

@@ -29,11 +29,12 @@ export const CloseBtn = styled.button`
   position: absolute;
   top: 16px;
   right: 16px;
+  color: #121417;
 
-  /* &:hover,
+  &:hover,
   &:focus {
     transform: scale(1.05);
-  } */
+  }
 `;
 
 export const ImgModal = styled.img`
