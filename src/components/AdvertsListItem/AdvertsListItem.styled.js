@@ -107,16 +107,27 @@ export const LearnMoreBtnText = styled.p`
   line-height: 1.43;
 `;
 
-export const FavoriteIconStyle = {
-  color: '#3470FF',
-  cursor: 'pointer',
-  width: '18px',
-  height: '18px',
-};
+export const FavoriteIconStyle = styled.svg`
+  fill: #3470ff;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
 
-export const FavoriteBorderIconStyle = {
-  color: 'rgba(255, 255, 255, 0.80)',
-  cursor: 'pointer',
-  width: '18px',
-  height: '18px',
-};
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+`;
+
+export const FavoriteBorderIconStyle = styled.svg`
+  stroke: rgba(255, 255, 255, 0.8);
+  fill: transparent;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+`;

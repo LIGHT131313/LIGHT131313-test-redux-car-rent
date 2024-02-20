@@ -26,8 +26,7 @@ import {
   FavoriteIconStyle,
   FavoriteBorderIconStyle,
 } from './AdvertsListItem.styled';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import sprite from 'img/sprite.svg';
 
 export const AdvertsListItem = ({ advert }) => {
   const {
@@ -79,9 +78,13 @@ export const AdvertsListItem = ({ advert }) => {
               onChange={() => handleCheckboxChange()}
             ></InputCheck>
             {isFavorited ? (
-              <FavoriteIcon sx={FavoriteIconStyle} />
+              <FavoriteIconStyle>
+                <use href={`${sprite}#icon-normal-heart`}></use>
+              </FavoriteIconStyle>
             ) : (
-              <FavoriteBorderIcon sx={FavoriteBorderIconStyle} />
+              <FavoriteBorderIconStyle>
+                <use href={`${sprite}#icon-normal-heart`}></use>
+              </FavoriteBorderIconStyle>
             )}
           </LabelCheck>
         </ListCheckWrap>

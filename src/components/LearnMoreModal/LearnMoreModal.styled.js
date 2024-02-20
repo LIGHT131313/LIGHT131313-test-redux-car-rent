@@ -1,35 +1,48 @@
 import styled from 'styled-components';
 
-export const styleBox = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '540px',
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 4,
-  borderRadius: '24px',
-  padding: '40px',
+export const customStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    zIndex: 1200,
+    justifyContent: 'center',
+    alignItems: 'center',
+    inset: 0,
+  },
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+
+    borderRadius: '24px',
+    padding: '40px',
+    width: '540px',
+    overflow: 'hidden',
+  },
 };
-
-export const ModalWrap = styled.div`
-  /* padding: 400px
-  background-color: #fff;
-  border-radius: 24px;
-  color: #121417;
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  padding-bottom: 40px; */
-`;
 
 export const CloseBtn = styled.button`
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #121417;
+  margin-left: auto;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: #121417;
+  }
 
   &:hover,
   &:focus {
