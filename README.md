@@ -20,10 +20,6 @@ Ukraine.
 
 ## Getting Started
 
-1. Clone the repo: ``
-2. Install dependencies: `npm i`
-3. Start the server: `npm start`
-
 To run the application locally, follow these steps:
 
 1. Clone the repository:
